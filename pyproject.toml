@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "toolbench"
+version = "0.1.0"
+description = "Application to run in master node of the toolbench system, includes the CLI control panel, and all functionalities. It also includes a docker file to create a development container for the project if needed."
+authors = ["Artic <main@artic42.com>"]
+license = "GPL v2"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+articlib = "^0.2.5"
+pycurses = "^0.0.37"
+pytest = "^8.4.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.2.0"
+flake8-pyproject = "^1.2.3"
+mypy = "^1.16.0"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
