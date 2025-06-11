@@ -1,0 +1,11 @@
+---
+services:
+  toolBenchDev:
+    image: toolbench_dev
+    container_name: toolBenchDev
+    hostname: ToolBenchDev
+    ports:
+      - 10022:22
+    volumes:
+      - ~/worksapces/toolBench/Dev:/home/developer/workspace
+    restart: unless-stopped

@@ -11,12 +11,11 @@ mkdir -p dockerFiles/temp
 git clone https://github.com/Artic42/NeoVim.git dockerFiles/temp/NeoVim
 gcc dockerFiles/temp/NeoVim/isGit.c -o dockerFiles/temp/isGit.app
 
-
 # Create new image
 docker build -t toolbench_dev .
 
 # Start new container
-docker run -itd -p 10022:22 --name toolbenchDev --hostname ToolBenchDev toolbench_dev
+docker-compose up
 
 # Remove temporal files created by the script
 rm -rf dockerFiles/temp
