@@ -1,7 +1,6 @@
 FROM alpine:3.22
 
 LABEL maintainer="Artic42 engineer@artic42.com"
-
 # Install openssh
 RUN apk add --no-cache openssh
 
@@ -40,5 +39,4 @@ EXPOSE 22
 
 # Set entrypoint
 ENTRYPOINT ["/entrypoint.sh"]
-
 

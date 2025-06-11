@@ -16,7 +16,7 @@ gcc dockerFiles/temp/NeoVim/isGit.c -o dockerFiles/temp/isGit.app
 docker build -t toolbench_dev .
 
 # Start new container
-docker run -itd -p 10022:22 --name toolbenchDev toolbench_dev
+docker run -itd -p 10022:22 --name toolbenchDev --hostname ToolBenchDev toolbench_dev
 
 # Remove temporal files created by the script
 rm -rf dockerFiles/temp
