@@ -1,3 +1,3 @@
 
-overlay use .venv/bin/activate
-source $"$env.HOME/.config/nushell/prompt"
+overlay use .venv/bin/activate.nu
+source ~/.config/nushell/prompt.nu

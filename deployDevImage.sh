@@ -15,7 +15,7 @@ gcc dockerFiles/temp/NeoVim/isGit.c -o dockerFiles/temp/isGit.app
 docker build -t toolbench_dev .
 
 # Start new container
-docker-compose up
+docker-compose up -d
 
 # Remove temporal files created by the script
 rm -rf dockerFiles/temp

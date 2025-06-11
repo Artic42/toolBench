@@ -25,6 +25,9 @@ COPY dockerFiles/temp/NeoVim/tmux/tmux.conf /home/developer/.tmux.conf
 COPY dockerFiles/temp/NeoVim/isGit.c /home/developer/isGit.c
 RUN gcc /home/developer/isGit.c -o /home/developer/bin/isGit
 
+# Create directory structure for bench
+RUN mkdir /home/developer/workspace
+
 # Configure ssh for user developer
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 RUN adduser -h /home/developer -s /usr/bin/nu -D developer
